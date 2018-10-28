@@ -1,0 +1,51 @@
+<div class="container" >
+<div class="brands">
+	<span class="brands-title">&nbsp;&nbsp;&nbsp;品牌：</span>
+	<ul class="brands-list">
+		<li><a href="#">AGUA</a></li>
+		<li><a href="#">BENDITAAM</a></li>
+		<li><a href="#">COLLECTION</a></li>
+		<li><a href="#">AnorakBLEU</a></li>
+		<li><a href="#">BLEUETBonne</a></li>
+	</ul>
+	<span class="brands-more">更多</span>
+</div>
+<div class="brands">
+	<span class="brands-title">&nbsp;&nbsp;&nbsp;排序：</span>
+	<ul class="brands-list">
+		<li class="active"><a href="#">默认排序</a></li>
+		<li><a href="#">按时间排序</a></li>
+		<li><a href="#">按价格从高到低</a></li>
+		<li><a href="#">按价格从低到高</a></li>
+	</ul>
+</div>
+<!--header-->
+<!--主体-->
+	<div class="products" ng-cloak>
+		<ul class="products-list" >
+			<li ng-repeat="x in product">
+				<img class="lazy" ng-srcset="img/{{x.imgsrc}}" width="100%" />
+				<div class="disc">
+					<p class="p-pname">{{x.name}}</p>
+					<p class="p-penname">{{x.enname}}</p>
+					<p class="p-price">{{x.price}}</p>
+				</div>
+				<div class="shopping-func">
+					<div class="pull-right">
+						<span class="glyphicon glyphicon-shopping-cart"></span>
+						<span class="glyphicon glyphicon-heart-empty"></span>
+					</div>
+				</div>
+			</li>
+			<li class="area"><a href="#"></a></li>
+		</ul>
+	</div>
+<!--主体-->
+<!--分页-->
+<ul class="pagination" style="float:right;">
+    <li><a>&laquo;</a></li>
+    <li ng-repeat="x in pages" ng-click="pgs($event)"><a>{{x}}</a></li>
+    <li><a>&raquo;</a></li>
+</ul>
+<!--分页-->
+</div>

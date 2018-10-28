@@ -1,0 +1,26 @@
+<div class="container">
+<div class="close-mainbox">
+	<div class="close-box">
+		<!-----服装列表--------->
+		<ul>
+			<li ng-repeat="x in close">
+				<img ng-srcset="img/{{x.imgsrc}}" width="100%" />
+				<div class="show-text">
+							<div class="shopping-func">
+								<div class="pull-left">
+									<span class="glyphicon glyphicon-shopping-cart"></span>加入购物车
+								</div>
+								<div class="pull-left">
+									<span class="glyphicon glyphicon-heart-empty"></span>收藏
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<p>{{x.closename}}</p>
+							<p>价格：<span class="show-price">{{x.price}}</span></p>
+					</div>
+			</li>
+		</ul>
+		<!-----服装列表--------->
+	</div>
+</div>
+</div>

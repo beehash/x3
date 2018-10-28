@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>野兽派</title>
+		<link type="text/css" href="css/lib/bootstrap.min.css" rel="stylesheet"/>
+		<link type="text/css" href="css/base.css" rel="stylesheet"/>
+		<link type="text/css" href="css/main.css" rel="stylesheet" />
+		<script src="js/lib/jquery-3.1.1.min.js"></script>
+		<script src="js/lib/bootstrap.min.js"></script>
+		<script src="js/lib/angular.min.js"></script>
+		<script src="js/lib/angular-animate.min.js"></script>
+		<script src="js/lib/angular-route.min.js"></script>
+	</head>
+	<body ng-app="myApp" ng-cloak>
+		<div class="body">
+			<div class="navtop">
+				<p class="navtitle">BEAST野兽派</p>
+			</div>
+		<div class="navbar navbg">
+			<div class="container">
+					<div class="navbar-header">
+						<p class="navbar-text"><span class="log-target">登录</span>&nbsp;|&nbsp;<span class="sign-target">注册</span></p>
+					</div>
+					<div class="navbox">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#/">首页</a></li>
+							<li><a href="#/products">新鲜上架</a></li>
+							<li><a href="#/flower">花艺</a></li>
+							<li><a href="#/family">家</a></li>
+							<li><a href="#/beauty">美妆</a></li>
+							<li><a href="#/close">服饰</a></li>
+							<li><a href="#/gifts">礼物</a></li>
+							<li><a href="#/cheap">折扣</a></li>
+							<li><a href="#/outsea">海外</a></li>
+						</ul>
+					</div>
+					<div class="navbar-right">
+						<p class="navbar-text"><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-shopping-cart"></span></p>
+					</div>
+				</div>
+		</div>
+		<div class="kefu_box">
+			<a target="_top" href="http://wpa.qq.com/msgrd?v=3&uin=410181756&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:410181756:53" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+		</div>
+		
+		<div class="contan" ng-view="">
+		</div>
+			<div class="navbar navbg">
+			<div class="container">
+					<ul class="nav navbar-nav">
+						<li> <a href="#/"></a></li>
+						<li> <a href="#/"></a></li>
+						<li> <a href="#/"></a></li>
+						<li><a href="#/">订阅号</a></li>
+						<li><a href="#/">微信商店</a></li>
+						<li><a href="#/">野兽VIP</a></li>
+						<li><a href="#/">配送方式</a></li>
+						<li><a href="#/">支付方式</a></li>
+						<li><a href="#/">售后服务</a></li>
+						<li><a href="#/">在线客服</a></li>
+						<li><a href="#/">实体店</a></li>
+					</ul>
+				</div>
+		</div>
+		<div class="footer">
+			<p class="footwords">关于我们 | 联系我们 | 加入我们 | 服务号声明 | 上海远驰计算机有限公司</p>
+		</div>
+		</div>
+		<!--------------------登陆弹窗--------------->
+		<div class="mask" id="login">
+			<div class="sign-box">
+				<div class="sign-box-top">
+					<img src="img/sign-top02.png" width="100%">
+				</div>
+				<div class="closebtn">
+				</div>
+				<div class="sign-title">用户登录</div>
+				<div class="sign-content form-group">
+					<label for="username">用户名：</label>
+					<input type="text" id="username" class="form-control" name="username"/>
+					<label for="password">密码：</label>
+					<input type="text" id="password" class="form-control" name="password"/>
+					<button class="btn btn-default" id="loginbtn">登录</button>
+					<div class="message"></div>
+					<div class="loginlocation" id="loginlocation">还未注册？请注册</div>
+				</div>
+			</div>
+		</div>
+		<!--------------------登陆弹窗--------------->
+		<!--------------------注册弹窗--------------->
+		<div class="mask" id="signin">
+			<div class="sign-box sign-box-w">
+				<div class="sign-box-top">
+					<img src="img/sign-top02.png" width="100%">
+				</div>
+				<div class="closebtn">
+				</div>
+				<div class="sign-title">用户注册</div>
+				<div class="sign-content form-group">
+					<label for="susername">用户名：</label>
+					<input type="text" id="susername" class="form-control" name="username"/>
+					<label for="spassword">密码：</label>
+					<input type="password" id="spassword" class="form-control" name="password"/>
+					<label for="dbspassword">确认密码：</label>
+					<div class="msgbox">
+						<span class="glyphicon glyphicon-alert"></span><span class="msg"></span>
+					</div>
+					<input type="password" id="dbpassword" class="form-control" name="password"/>
+					<label for="phone">手机号码：</label>
+					<input type="text" id="phone" class="form-control" name="password"/>
+					<label for="phone">验证码：</label>
+					<div class="clearfix"></div>
+					<input type="text" id="phone" class="form-control pull-left" style="width:130px;" name="password"/>
+					<button class="btn btn-default btn-primary pull-left" id="sendpm" style="margin-top:0">发送验证码</button>
+					<div class="clearfix"></div>
+					<button class="btn btn-default" id="signbtn">注册</button>
+					<div class="message"></div>
+					<div class="loginlocation" id="signlocation">已经注册？请登录</div>
+				</div>
+			</div>
+		</div>
+		<!--------------------注册弹窗--------------->
+		<!--<a id="ibangkf" href="http://www.ibangkf.com">在线客服系统 </a>
+		<script type="text/javascript" src="http://c.ibangkf.com/i/c-beehash.js"></script>-->
+		<script src="js/index.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/desk.js"></script>
+	</body>
+</html>
