@@ -1,0 +1,51 @@
+	<div class="top">
+		<img src="img/1.jpg" width="100%"/>
+	</div>
+	<div class="people">
+		<div class="look mui-pull-left"><img src="img/7.jpg" width="100%"></div>
+		<div class="mui-pull-left lookword">
+			<p class="lookword01">创始人</p>
+			<p>FOUNDER</p>
+		</div>
+		<div class="mui-clearfix mui-pull-right words">
+			<p>我们更讲究场景，也更注重送花人背后的故事。</p>
+			<p class="mui-text-right">— — Amber</p>
+		</div>
+	</div>
+	<div class="mui-slider">
+		<ul class="mui-slider-group mui-slider-loop">
+			<li class="mui-slider-item mui-slider-item-duplicate"><img ng-srcset="img/{{imgslist[num].src}}" width="100%"/></li>
+			<li class="mui-slider-item" ng-repeat="x in imgslist">
+				<img ng-srcset="img/{{x.src}}" width="100%">
+			</li>
+			<li class="mui-slider-item mui-slider-item-duplicate"><img ng-srcset="img/{{imgslist[0].src}}" width="100%"/></li>
+		</ul>
+		<div class="mui-slider-indicator">
+			<div class="mui-indicator mui-active"></div>
+			<div class="mui-indicator" ng-repeat="x in imgslist"></div>
+		</div>
+	</div>
+	<div class="products">
+		<ul> 
+			<li><a href="#"><img src="img/3.jpg" width="100%"></a></li>
+			<li><a href="#"><img src="img/4.jpg" width="100%"></a></li>
+		</ul>
+		<ul> 
+			<li><a href="#"><img src="img/5.jpg" width="100%"></a></li>
+			<li><a href="#"><img src="img/6.jpg" width="100%"></a></li>
+		</ul>
+	</div>
+	<div class="VIP">
+		<ul>
+			<li class="black"><a href="#">会员政策</a></li>
+			<li class="green"><a href="#">售后服务</a></li>
+		</ul>
+		<ul>
+			<li class="black"><a href="#">配送方式</a></li>
+			<li class="green"><a href="#">联系客服</a></li>
+		</ul>
+		<ul>
+			<li class="black"><a href="#">加入我们</a></li>
+			<li class="green"><a href="#">关注我们</a></li>
+		</ul>
+	</div>

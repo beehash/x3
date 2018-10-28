@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    	<title>野兽派</title>
+    	<script src="js/lib/angular.min.js"></script>
+		<script src="js/lib/angular-route.min.js"></script>
+		<script src="js/lib/angular-animate.min.js"></script>
+		<link type="text/css" href="css/lib/mui.min.css" rel="stylesheet"/>
+		<link type="text/css" href="css/lib/icons-extra.css" rel="stylesheet"/>
+		<link type="text/css" href="css/base.css" rel="stylesheet"/>
+		<link type="text/css" href="css/main.css" rel="stylesheet" />
+	</head>
+	<body ng-app="myApp">
+			<div class="indexbody"></div>
+		<!----------菜单导航栏------------------>
+				<!------nav---->
+					<div class="mui-bar mui-bar-nav">
+						<div class="mui-pull-left login">
+							<span id="log-target">登陆</span>
+							&nbsp;|&nbsp;
+							<span id="sign-target">注册</span>
+						</div>
+						<a href="#carts" class="mui-icon mui-icon-search mui-pull-right"></a>
+						<a href="#carts" class="mui-icon mui-icon-extra mui-icon-extra-cart mui-pull-right"></a>
+						<h3 class="mui-title">BEAST野兽派</h3>
+					</div>
+					<!--nav--->
+			<!-------------菜单内容--------------->
+			<div class="slider-nav">
+				<div class="slider-nav-box">
+					<ul class="slider-nav-body">
+						<li class="slider-nav-item slider-active"><a href="#/">首页</a></li>
+						<li class="slider-nav-item"><a href="#/products">新鲜上架</a></li>
+						<li class="slider-nav-item"><a href="#/flower">花艺</a></li>
+						<li class="slider-nav-item"><a href="#/family">家</a></li>
+						<li class="slider-nav-item"><a href="#/beauty">美妆</a></li>
+						<li class="slider-nav-item"><a href="#/close">服饰</a></li>
+						<li class="slider-nav-item"><a href="#/gifts">礼物</a></li>
+						<li class="slider-nav-item"><a href="#/cheap">折扣</a></li>
+						<li class="slider-nav-item"><a href="#/outsea">海外</a></li>
+					</ul>
+				</div>
+			</div>
+		<!-------------菜单内容--------------->
+		<!----------菜单导航栏------------------>
+		
+		
+		
+		<!---------内容容器-------------->
+		<div class="mui-content" ng-view="" id="view-m">
+			
+		</div>
+		<!---------内容容器-------------->
+		<div class="footer">
+			<ul>
+				<li><span class="mui-icon mui-icon-home-filled"></span></li>
+				<li><span class="mui-icon mui-icon-search"></span></li>
+				<li><span class="mui-icon mui-icon-extra mui-icon-extra-cart"></span></li>
+				<li><span class="mui-icon mui-icon-person-filled"></span></li>
+			</ul>
+		</div>
+	<!--
+    	作者：offline
+    	时间：2018-02-12
+    	描述：底部导航栏
+    -->
+    <!--
+    	作者：offline
+    	时间：2018-02-12
+    	描述：登录弹窗
+    -->
+    <div class="mask" id="login">
+			<div class="sign-box">
+				<div class="sign-box-top">
+					<img src="img/sign-top02.png" width="100%">
+				</div>
+				<div class="closebtn">
+				</div>
+				<div class="sign-title">用户登录</div>
+				<div class="sign-content">
+					<div class="mui-input-row">
+						<label for="username">用户名：</label>
+						<input type="text" id="username" class="input-control" name="username"/>
+						<span class="mui-icon mui-icon-clear"></span>
+					</div>
+					<div class="mui-input-row">
+						<label for="password">密码：</label>
+						<input type="text" id="password" class="input-control" name="password"/>
+						<span class="mui-icon mui-icon-eye"></span>
+					</div>
+					<button class="mui-btn mui-btn-negative" id="loginbtn">登录</button>
+					<div class="message"></div>
+					<div class="loginlocation" id="loginlocation">还未注册？请注册</div>
+				</div>
+			</div>
+		</div>
+     <!--
+    	作者：offline
+    	时间：2018-02-12
+    	描述：登录弹窗
+    -->
+    <!---------------------注册弹窗------------------>
+    <div class="mask" id="signin">
+			<div class="sign-box">
+				<div class="sign-box-top">
+					<img src="img/sign-top02.png" width="100%">
+				</div>
+				<div class="closebtn">
+				</div>
+				<div class="sign-title">用户注册</div>
+				<div class="sign-content">
+					<div class="mui-input-row">
+					<label for="susername">用户名：</label>
+					<input type="text" id="susername" class="input-control" name="username"/>
+					<span class="mui-icon mui-icon-clear"></span>
+					</div>
+					<div class="mui-input-row">
+					<label for="spassword">密码：</label>
+					<input type="password" id="spassword" class="input-control" name="password"/>
+					<span class="mui-icon mui-icon-eye"></span>
+					</div>
+					<div class="mui-input-row">
+					<label for="dbspassword">确认密码：</label>
+					<div class="msgbox">
+						<span class="glyphicon glyphicon-alert"></span><span class="msg"></span>
+					</div>
+					<input type="password" id="dbpassword" class="input-control" name="password"/>
+					<span class="mui-icon mui-icon-eye"></span>
+					</div>
+					<div class="mui-input-row">
+					<label for="phone">手机号码：</label>
+					<input type="text" id="phone" class="input-control" name="password"/>
+					<span class="mui-icon mui-icon-clear"></span>
+					</div>
+					<button class="mui-btn mui-btn-negative" id="signbtn">注册</button>
+					<div class="message"></div>
+					<div class="loginlocation" id="signlocation">已经注册？请登录</div>
+				</div>
+			</div>
+		</div>
+		<!---------------------注册弹窗------------------>
+	<script src="js/lib/mui.min.js"></script>
+	<script src="js/lib/jquery-3.1.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/desk.js"></script>
+	<script>
+		window.addEventListener('dragstart',function(e){
+		 mui.gestures.touch.lockDirection = true; //锁定方向
+		 mui.gestures.touch.startDirection = e.detail.direction;
+		});
+		window.addEventListener('dragleft', function(e) {
+		 if(!mui.isScrolling){
+		  e.detail.gesture.preventDefault(); 
+		 }
+		});
+
+//    		url:"view/beauty.html",//子页面HTML地址，支持本地地址和网络地址
+//    		id:"myslider",
+//   });
+	</script>
+	</body>
+</html>

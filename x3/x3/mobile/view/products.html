@@ -1,0 +1,47 @@
+<div class="products-top">
+	<div class="brand">
+		<div class="brand-title mui-pull-left">品牌:</div>
+		<div class="brand-list mui-pull-right">
+			<ul>
+				<li>AGUA</li>
+				<li>DENDITAAM</li>
+				<li>COLLECTION</li>
+				<li>AnorakBLUE</li>
+				<li>BLEUTBonne</li>
+			</ul>
+		</div>
+		<div class="mui-clearfix"></div>
+	</div>
+	<div class="input-box">
+		<div class="input-group">
+					<span class="mui-icon mui-icon-search mui-pull-left"></span>
+					<input type="text" class="input-control mui-pull-left" ng-model="findbrands" place-holder="搜索品牌，共有389款品牌入驻"/>
+		</div>
+		<div class="concel-list">
+			<ul>
+				<li ng-repeat="x in brands | filter:findbrands">
+					<span class="left-d"></span>
+					<span class="brands-text">{{x.brands}}</span>
+					<span class="right-d"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="products-body">
+	<div class="recommend">
+		<img src="img/flower.jpg" width="100%"/>
+	</div>
+	<div class="products">
+		<ul> 
+			<li><a href="#"><img src="img/3.jpg" width="100%"></a></li>
+			<li><a href="#"><img src="img/4.jpg" width="100%"></a></li>
+		</ul>
+		<ul> 
+			<li><a href="#"><img src="img/5.jpg" width="100%"></a></li>
+			<li><a href="#"><img src="img/6.jpg" width="100%"></a></li>
+		</ul>
+	</div>
+	<div class="line"></div>
+</div>
+
